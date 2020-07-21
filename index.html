@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         .container {
-            max-width: 500px;
-            height: 400px;
-            border: 1px solid greenyellow;
+            max-width: 600px;
+            height: 500px;
+            border: 2px solid rgba(4, 182, 99, .3);
+            border-radius: 2px;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
         }
 
         .container div {
-            border: 1px solid #ccc;
+            border: 1px solid rgb(231, 231, 231);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -35,6 +36,32 @@
         .container div.equal {
             grid-column: 3 / 5;
         }
+
+        .clear {
+            color: rgb(233, 10, 96);
+            font-weight: bold;
+        }
+
+        .container .divide, 
+        .container .multiply, 
+        .container .subtract, 
+        .container .add {
+            color: rgb(8, 124, 201);
+            font-weight: bold;
+            font-size: 28px;
+        }
+
+        .container .equal {
+            background-color: rgb(8, 124, 201);
+            color: whitesmoke;
+            font-weight: bold;
+            font-size: 32px;
+        }
+
+        .container .back {
+            color:rgb(4, 182, 99);
+            font-size: 28px;
+        }
     </style>
     <title>TJ Calculator</title>
 </head>
@@ -44,7 +71,7 @@
     <main>
         <div class="container">
             <div class="display">000</div>
-            <div class="cancel">C</div>
+            <div class="clear">C</div>
             <div class="zero">0</div>
             <div class="dot">.</div>
             <div class="divide">/</div>
