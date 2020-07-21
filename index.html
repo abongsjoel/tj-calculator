@@ -7,10 +7,18 @@
         .container {
             max-width: 500px;
             height: 450px;
-            border: 1px solid #ccc;
+            border: 1px solid greenyellow;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        }
+
+        .container div {
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
         }
     </style>
     <title>TJ Calculator</title>
@@ -20,24 +28,25 @@
 
     <main>
         <div class="container">
-            <div>C</div>
-            <div>0</div>
-            <div>.</div>
-            <div>/</div>
-            <div>9</div>
-            <div>8</div>
-            <div>7</div>
-            <div>x</div>
-            <div>6</div>
-            <div>5</div>
-            <div>4</div>
-            <div>-</div>
-            <div>3</div>
-            <div>2</div>
-            <div>1</div>
-            <div>+</div>
-            <div>back</div>
-            <div>=</div>
+            <div class="display">000</div>
+            <div class="cancel">C</div>
+            <div class="zero">0</div>
+            <div class="dot">.</div>
+            <div class="divide">/</div>
+            <div class="nine">9</div>
+            <div class="eight">8</div>
+            <div class="seven">7</div>
+            <div class="multiply">x</div>
+            <div class="six">6</div>
+            <div class="five">5</div>
+            <div class="four">4</div>
+            <div class="subtract">-</div>
+            <div class="three">3</div>
+            <div class="two">2</div>
+            <div class="one">1</div>
+            <div class="add">+</div>
+            <div class="back">back</div>
+            <div class="equal">=</div>
         </div>
     </main>
 
