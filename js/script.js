@@ -48,20 +48,18 @@ numbers.forEach(number => {
 
 operators.forEach(operator => {
   const val = ' '+operator.textContent+' ';
-  operator.addEventListener('click', () => {
-    const span = document.createElement('span');
-    span.style.color = 'rgb(8, 124, 201)';
-    span.textContent = val;
-    topDisplay.appendChild(span);
-  });
+  operator.addEventListener('click', populate.bind(this, val));
 });
 
 function populate(val) {
-  numsHolder += val;
   const span = document.createElement('span');
+  if(!isNaN(Number(val))){    //Its a number
+    numsHolder += val; 
+  } else {
+    span.style.color = 'rgb(8, 124, 201)';
+  }
   span.textContent = val;
   topDisplay.appendChild(span);
-  //topDisplay.textContent += numsHolder;
   console.log(val);
 }
 
