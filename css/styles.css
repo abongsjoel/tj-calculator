@@ -31,7 +31,7 @@
     grid-column: 3 / 5;
 }
 
-.clear {
+#clear {
     color: rgb(233, 10, 96);
     font-weight: bold;
 }
