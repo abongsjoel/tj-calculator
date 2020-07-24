@@ -16,16 +16,16 @@ function divide(num1, num2){
 
 function operate(operator, num1, num2){
     switch(operator){
-        case 'add':
+        case '+':
           return add(num1, num2);
           break;
-        case 'sub':
+        case '-':
           return subtract(num1, num2);
           break;
-        case 'mul':
+        case 'x':
           return multiply(num1, num2);
           break;
-        case 'div':
+        case '/':
           return divide(num1, num2);
           break;
         default:
@@ -41,6 +41,7 @@ const valHolder = [];
 const numbers = document.querySelectorAll('.number');
 const operators = document.querySelectorAll('.operator');
 const topDisplay = document.querySelector('#top');
+const equal = document.querySelector('#equal');
 
 numbers.forEach(number => {
   const val = number.textContent;
@@ -80,4 +81,11 @@ function populate(val) {
   topDisplay.appendChild(span);
   console.log("Value of numstring",numString);
 }
+
+equal.addEventListener('click', () => {
+  num2 = Number(numString);
+  const operator = valHolder.pop();
+  const val = operate(operator, num1, num2);
+  console.log(val);
+})
 
