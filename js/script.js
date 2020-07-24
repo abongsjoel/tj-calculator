@@ -35,7 +35,8 @@ function operate(operator, num1, num2){
 
 let num1 = '';
 let num2 = '';
-let numsHolder = '';
+let numString = '';
+const valHolder = [];
 
 const numbers = document.querySelectorAll('.number');
 const operators = document.querySelectorAll('.operator');
@@ -47,20 +48,29 @@ numbers.forEach(number => {
 });
 
 operators.forEach(operator => {
-  const val = ' '+operator.textContent+' ';
-  operator.addEventListener('click', populate.bind(this, val));
+  operator.addEventListener('click', () => {
+    let val = operator.textContent;
+    console.log("Value of numstring in operator",numString);
+    if(numString === ''){
+      val = "";
+    } else {
+  
+    }
+    populate(val);
+  });
 });
 
 function populate(val) {
   const span = document.createElement('span');
   if(!isNaN(Number(val))){    //Its a number
-    numsHolder += val; 
+    numString += val; 
   } else {
     span.style.color = 'rgb(8, 124, 201)';
+    val = ' '+val+' ';
   }
   span.textContent = val;
   topDisplay.appendChild(span);
-  console.log(val);
+  console.log("Value of numstring",numString);
 }
 
 console.log(operate('div', 4,8));
