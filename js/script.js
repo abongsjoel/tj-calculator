@@ -50,8 +50,21 @@ numbers.forEach(number => {
 operators.forEach(operator => {
   operator.addEventListener('click', () => {
     let val = '';
-    if(numString !== ''){   // Do nothing when we start by clicking on an operator
-      val = operator.textContent;   
+    if(numString !== '' || num1 !== ''){   // Do nothing when we start by clicking on an operator
+      val = operator.textContent; 
+      if(valHolder.length === 0){
+        num1 = Number(numString);
+        numString = '';
+        valHolder.push(num1);
+        valHolder.push(val);
+      } else if("Here", typeof valHolder[valHolder.length-1] !== "number"){
+        console.log("Here", typeof valHolder[valHolder.length-1] !== "number");
+        console.log('double operator');
+        valHolder.pop();
+        valHolder.push(val);
+        topDisplay.removeChild(topDisplay.lastElementChild);
+      }
+   
     } 
     populate(val);
   });
