@@ -49,6 +49,19 @@
 
 .container #equal {
     grid-column: 3 / 5;
+    background-color: rgb(8, 124, 201);
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+
+.container #equal:hover {
+    background-color: rgba(8, 124, 201, 0.95);
+}
+
+.container #equal:active {
+    background-color: rgba(8, 124, 201, 0.9);
 }
 
 #clear {
@@ -60,13 +73,6 @@
     color: rgb(8, 124, 201);
     font-weight: bold;
     font-size: 28px;
-}
-
-.container #equal {
-    background-color: rgb(8, 124, 201);
-    color: whitesmoke;
-    font-weight: bold;
-    font-size: 32px;
 }
 
 .container #back {

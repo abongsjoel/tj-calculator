@@ -58,8 +58,6 @@ operators.forEach(operator => {
         valHolder.push(num1);
         valHolder.push(val);
       } else if("Here", typeof valHolder[valHolder.length-1] !== "number"){
-        console.log("Here", typeof valHolder[valHolder.length-1] !== "number");
-        console.log('double operator');
         valHolder.pop();
         valHolder.push(val);
         topDisplay.removeChild(topDisplay.lastElementChild);
@@ -83,4 +81,3 @@ function populate(val) {
   console.log("Value of numstring",numString);
 }
 
-console.log(operate('div', 4,8));
