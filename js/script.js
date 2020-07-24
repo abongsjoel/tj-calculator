@@ -38,15 +38,21 @@ let num2 = '';
 let numsHolder = '';
 
 const numbers = document.querySelectorAll('.number');
+const operators = document.querySelectorAll('.operator');
 const topDisplay = document.querySelector('#top');
 
 numbers.forEach(number => {
-  number.addEventListener('click', populate.bind(this, number));
+  const val = number.textContent;
+  number.addEventListener('click', populate.bind(this, val));
 });
 
+operators.forEach(operator => {
+  const val = ' '+operator.textContent+' ';
+  operator.addEventListener('click', populate.bind(this, val));
+});
 
-function populate(number) {
-  numsHolder += number.textContent;
+function populate(val) {
+  numsHolder += val;
   topDisplay.textContent = numsHolder;
   console.log(number.textContent);
 }
