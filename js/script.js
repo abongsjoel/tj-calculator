@@ -33,20 +33,22 @@ function operate(operator, num1, num2){
     }
 }
 
-let num1 = 0;
-let num2 = 0;
+let num1 = '';
+let num2 = '';
+let numsHolder = '';
 
 const numbers = document.querySelectorAll('.number');
+const topDisplay = document.querySelector('#top');
 
 numbers.forEach(number => {
-  number.addEventListener('click', () => {
-    console.log(number.textContent);
-  });
+  number.addEventListener('click', populate.bind(this, number));
 });
 
 
-function populate() {
-
+function populate(number) {
+  numsHolder += number.textContent;
+  topDisplay.textContent = numsHolder;
+  console.log(number.textContent);
 }
 
 console.log(operate('div', 4,8));
