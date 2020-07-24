@@ -48,13 +48,21 @@ numbers.forEach(number => {
 
 operators.forEach(operator => {
   const val = ' '+operator.textContent+' ';
-  operator.addEventListener('click', populate.bind(this, val));
+  operator.addEventListener('click', () => {
+    const span = document.createElement('span');
+    span.style.color = 'rgb(8, 124, 201)';
+    span.textContent = val;
+    topDisplay.appendChild(span);
+  });
 });
 
 function populate(val) {
   numsHolder += val;
-  topDisplay.textContent = numsHolder;
-  console.log(number.textContent);
+  const span = document.createElement('span');
+  span.textContent = val;
+  topDisplay.appendChild(span);
+  //topDisplay.textContent += numsHolder;
+  console.log(val);
 }
 
 console.log(operate('div', 4,8));
