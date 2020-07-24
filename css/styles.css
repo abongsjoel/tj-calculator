@@ -15,7 +15,7 @@
     font-size: 20px;
 }
 
-.container div.display {
+.container #display {
     grid-area: 1 / 1 / 3 / 5;
     display: flex;
     justify-content: flex-end;
@@ -23,11 +23,11 @@
     font-size: 32px;
 }
 
-.container div.back {
+.container #back {
     grid-column: 1 / 3;
 }
 
-.container div.equal {
+.container #equal {
     grid-column: 3 / 5;
 }
 
@@ -36,23 +36,20 @@
     font-weight: bold;
 }
 
-.container .divide, 
-.container .multiply, 
-.container .subtract, 
-.container .add {
+.container .operator {
     color: rgb(8, 124, 201);
     font-weight: bold;
     font-size: 28px;
 }
 
-.container .equal {
+.container #equal {
     background-color: rgb(8, 124, 201);
     color: whitesmoke;
     font-weight: bold;
     font-size: 32px;
 }
 
-.container .back {
+.container #back {
     color:rgb(4, 182, 99);
     font-size: 28px;
 }
