@@ -49,13 +49,10 @@ numbers.forEach(number => {
 
 operators.forEach(operator => {
   operator.addEventListener('click', () => {
-    let val = operator.textContent;
-    console.log("Value of numstring in operator",numString);
-    if(numString === ''){
-      val = "";
-    } else {
-  
-    }
+    let val = '';
+    if(numString !== ''){   // Do nothing when we start by clicking on an operator
+      val = operator.textContent;   
+    } 
     populate(val);
   });
 });
