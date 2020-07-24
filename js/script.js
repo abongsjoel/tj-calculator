@@ -38,6 +38,12 @@ let num2 = 0;
 
 const numbers = document.querySelectorAll('.number');
 
+numbers.forEach(number => {
+  number.addEventListener('click', () => {
+    console.log(number.textContent);
+  });
+});
+
 
 function populate() {
 
