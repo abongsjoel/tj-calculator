@@ -36,6 +36,9 @@ function operate(operator, num1, num2){
 let num1 = 0;
 let num2 = 0;
 
+const numbers = document.querySelectorAll('.number');
+
+
 function populate() {
 
 }
