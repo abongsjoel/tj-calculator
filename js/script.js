@@ -84,8 +84,12 @@ function populate(val) {
 
 equal.addEventListener('click', () => {
   num2 = Number(numString);
+  numString = '';
   const operator = valHolder.pop();
-  const val = operate(operator, num1, num2);
-  console.log(val);
+  const result = operate(operator, num1, num2);
+  topDisplay.textContent = '';
+  valHolder.pop();
+  populate(result);
+  console.log(result);
 })
 
