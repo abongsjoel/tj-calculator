@@ -91,7 +91,6 @@ operators.forEach(operator => {
     let val = '';
     if(numString !== '' || num1 !== ''){   // Do nothing when we start by clicking on an operator
       val = operator.textContent; 
-      console.log("length of valHolder is", valHolder.length);
       if(valHolder.length === 0){
         num1 = Number(numString);
         numString = '';
@@ -114,9 +113,6 @@ operators.forEach(operator => {
     }
     populate(val);
     isDotClicked = false;
-    console.log("end of operator", valHolder);
-    console.log("value of numString", numString);
-    console.log("value of num1", num1);
   });
 });
 
@@ -134,11 +130,13 @@ function populate(val) {
 }
 
 equal.addEventListener('click', () => {
-  bottomDisplay.textContent = '';
-  const result = performOperation();
-  topDisplay.textContent = '';
-  populate(result);
-
+  if(valHolder.length === 2 && numString !== ''){  //Only work when necessary
+    console.log("do equal");
+    bottomDisplay.textContent = '';
+    const result = performOperation();
+    topDisplay.textContent = '';
+    populate(result);
+  }
 })
 
 function performOperation() {
