@@ -43,6 +43,7 @@ const operators = document.querySelectorAll('.operator');
 const topDisplay = document.querySelector('#top');
 const bottomDisplay = document.querySelector('#bottom');
 const equal = document.querySelector('#equal');
+const clear = document.querySelector('#clear');
 const dot = document.querySelector('#dot');
 let isDotClicked = false;
 
@@ -56,6 +57,15 @@ dot.addEventListener('click', () => {
     populate('.');
     isDotClicked = true;
   }
+})
+
+clear.addEventListener('click', () => {
+  num1 = '';
+  num2 = '';
+  numString = '';
+  valHolder = [];
+  topDisplay.textContent = '';
+  bottomDisplay.textContent = '';
 })
 
 operators.forEach(operator => {
@@ -116,9 +126,7 @@ function performOperation() {
   const operator = valHolder.pop();
   valHolder = [];
   result = operate(operator, num1, num2)
-
   result = isFloat(result) ? result.toFixed(2) : result;
-
   return result;
 }
 
