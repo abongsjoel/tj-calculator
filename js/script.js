@@ -45,6 +45,7 @@ const bottomDisplay = document.querySelector('#bottom');
 const equal = document.querySelector('#equal');
 const clear = document.querySelector('#clear');
 const dot = document.querySelector('#dot');
+const back = document.querySelector('#back');
 let isDotClicked = false;
 
 numbers.forEach(number => {
@@ -68,6 +69,23 @@ clear.addEventListener('click', () => {
   bottomDisplay.textContent = '';
 })
 
+back.addEventListener('click', () => {
+  if(numString){
+    const stringArr = numString.split('');
+    stringArr.pop();
+    numString = stringArr.join('');
+    console.log(numString);
+  } else if(valHolder.length !== 0 && typeof valHolder[valHolder.length-1] !== "number"){
+    console.log("before pop", valHolder)
+    valHolder.pop();
+    numString = num1;
+    num1 = '';
+    valHolder = [];
+    console.log("after pop", valHolder)
+  }
+  topDisplay.removeChild(topDisplay.lastElementChild);
+})
+
 operators.forEach(operator => {
   operator.addEventListener('click', () => {
     let val = '';
@@ -79,7 +97,7 @@ operators.forEach(operator => {
         numString = '';
         valHolder.push(num1);
         valHolder.push(val);
-      } else if(typeof valHolder[valHolder.length-1] !== "number"){
+      } else if(typeof valHolder[valHolder.length-1] !== "number"){ //last value of valHolder is an operator
         if(numString === ''){
           console.log("double operators");
           valHolder.pop();
@@ -96,6 +114,9 @@ operators.forEach(operator => {
     }
     populate(val);
     isDotClicked = false;
+    console.log("end of operator", valHolder);
+    console.log("value of numString", numString);
+    console.log("value of num1", num1);
   });
 });
 
