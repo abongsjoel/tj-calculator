@@ -36,11 +36,12 @@ function operate(operator, num1, num2){
 let num1 = '';
 let num2 = '';
 let numString = '';
-const valHolder = [];
+let valHolder = [];
 
 const numbers = document.querySelectorAll('.number');
 const operators = document.querySelectorAll('.operator');
 const topDisplay = document.querySelector('#top');
+const bottomDisplay = document.querySelector('#bottom');
 const equal = document.querySelector('#equal');
 
 numbers.forEach(number => {
@@ -53,6 +54,7 @@ operators.forEach(operator => {
     let val = '';
     if(numString !== '' || num1 !== ''){   // Do nothing when we start by clicking on an operator
       val = operator.textContent; 
+      console.log("length of valHolder is", valHolder.length);
       if(valHolder.length === 0){
         num1 = Number(numString);
         numString = '';
@@ -65,12 +67,13 @@ operators.forEach(operator => {
           valHolder.push(val);
           topDisplay.removeChild(topDisplay.lastElementChild);
         } else {
-          console.log(numString);
+          const result = performOperation();
+          bottomDisplay.textContent = result;
+          num1 = result;
+          valHolder.push(num1);
+          valHolder.push(val);
         }
-      } else {
-        console.log("here we go");
-      }
-   
+      } 
     }
     populate(val);
   });
@@ -90,9 +93,9 @@ function populate(val) {
 }
 
 equal.addEventListener('click', () => {
+  bottomDisplay.textContent = '';
   const result = performOperation();
   topDisplay.textContent = '';
-  valHolder.pop();
   populate(result);
 
 })
@@ -101,5 +104,7 @@ function performOperation() {
   num2 = Number(numString);
   numString = '';
   const operator = valHolder.pop();
+  valHolder = [];
+  console.log("length in pO", valHolder.length);
   return operate(operator, num1, num2)
 }
