@@ -115,6 +115,13 @@ function performOperation() {
   numString = '';
   const operator = valHolder.pop();
   valHolder = [];
-  console.log("length in pO", valHolder.length);
-  return operate(operator, num1, num2)
+  result = operate(operator, num1, num2)
+
+  result = isFloat(result) ? result.toFixed(2) : result;
+
+  return result;
+}
+
+function isFloat(n){
+  return Number(n) === n && n % 1 !== 0;
 }
