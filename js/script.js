@@ -43,11 +43,20 @@ const operators = document.querySelectorAll('.operator');
 const topDisplay = document.querySelector('#top');
 const bottomDisplay = document.querySelector('#bottom');
 const equal = document.querySelector('#equal');
+const dot = document.querySelector('#dot');
+let isDotClicked = false;
 
 numbers.forEach(number => {
   const val = number.textContent;
   number.addEventListener('click', populate.bind(this, val));
 });
+
+dot.addEventListener('click', () => {
+  if(!isDotClicked){
+    populate('.');
+    isDotClicked = true;
+  }
+})
 
 operators.forEach(operator => {
   operator.addEventListener('click', () => {
@@ -76,12 +85,13 @@ operators.forEach(operator => {
       } 
     }
     populate(val);
+    isDotClicked = false;
   });
 });
 
 function populate(val) {
   const span = document.createElement('span');
-  if(!isNaN(Number(val))){    //Its a number
+  if(!isNaN(Number(val)) || val === '.'){    //Its a number or a decimal point
     numString += val; 
   } else {
     span.style.color = 'rgb(8, 124, 201)';
