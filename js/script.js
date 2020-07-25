@@ -58,13 +58,20 @@ operators.forEach(operator => {
         numString = '';
         valHolder.push(num1);
         valHolder.push(val);
-      } else if("Here", typeof valHolder[valHolder.length-1] !== "number"){
-        valHolder.pop();
-        valHolder.push(val);
-        topDisplay.removeChild(topDisplay.lastElementChild);
+      } else if(typeof valHolder[valHolder.length-1] !== "number"){
+        if(numString === ''){
+          console.log("double operators");
+          valHolder.pop();
+          valHolder.push(val);
+          topDisplay.removeChild(topDisplay.lastElementChild);
+        } else {
+          console.log(numString);
+        }
+      } else {
+        console.log("here we go");
       }
    
-    } 
+    }
     populate(val);
   });
 });
@@ -83,13 +90,16 @@ function populate(val) {
 }
 
 equal.addEventListener('click', () => {
-  num2 = Number(numString);
-  numString = '';
-  const operator = valHolder.pop();
-  const result = operate(operator, num1, num2);
+  const result = performOperation();
   topDisplay.textContent = '';
   valHolder.pop();
   populate(result);
-  console.log(result);
+
 })
 
+function performOperation() {
+  num2 = Number(numString);
+  numString = '';
+  const operator = valHolder.pop();
+  return operate(operator, num1, num2)
+}
