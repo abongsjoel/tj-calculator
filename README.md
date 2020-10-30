@@ -29,7 +29,6 @@ In this project, i used HTML, CSS and JavaScript to build a basic calculator
 
 - [The Odin Project](https://www.theodinproject.com)
 - [w3schools](https://www.w3schools.com)
-- Our standup team
 
 ## Show your support
 <p> Give a 
