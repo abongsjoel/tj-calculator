@@ -1,9 +1,9 @@
 
-# Building with Backgrounds and Gradients
+# TJ Calculator
 
 > In this project I build a simple calculator
 
-![screenshot](https://raw.githubusercontent.com/abongsjoel/tj-calculatore/master/screenshot.png)
+![screenshot](/master/screenshot.png)
 
 In this project, i used HTML, CSS and JavaScript to build a basic calculator
 
