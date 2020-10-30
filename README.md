@@ -3,7 +3,7 @@
 
 > In this project I build a simple calculator
 
-![screenshot](/master/screenshot.png)
+![screenshot](../master/screenshot.png)
 
 In this project, i used HTML, CSS and JavaScript to build a basic calculator
 
