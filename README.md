@@ -36,5 +36,5 @@ In this project, i used HTML, CSS and JavaScript to build a basic calculator
   if you like this project!</p>
 
 ## License
-  <p>This project is <a href="../Features/LICENSE">MIT</a> licensed.</p>
+  <p>This project is <a href="../master/LICENSE">MIT</a> licensed.</p>
 
