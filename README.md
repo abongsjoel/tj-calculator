@@ -5,7 +5,7 @@
  
 ![screenshot](../master/screenshot.png)
 
-The calculator contains functions for all of the basic math operators we typically find on simple calculators. Users can string together several operations and get the right anser, with each pair of numbers being evaluated at a time. Numbers with long decimals are rounded so that they dont overflow the screen.
+The calculator contains functions for all of the basic math operators we typically find on simple calculators. Users can string together several operations and get the right answer, with each pair of numbers being evaluated at a time. Numbers with long decimals are rounded so that they dont overflow the screen.
 
 ## Live Demo 
 
