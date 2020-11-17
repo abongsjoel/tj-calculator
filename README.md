@@ -1,11 +1,11 @@
 
 # TJ Calculator
 
-> In this project I build a simple calculator
+> In this project I built a simple calculator using plain HTML, CSS and JavaScript.
 
 ![screenshot](../master/screenshot.png)
 
-In this project, i used HTML, CSS and JavaScript to build a basic calculator
+In this project, i used plain HTML5, CSS3 and JavaScript to build a basic calculator. I started by creating functions for the basic math operators. I then created an operate function that takes an operator and 2 numbers and then calls one of the operators. I also created buttons for each digit, each of the functions and the "Equals" key as well as a display for the calculator. Then i created the functions that populate the display and make the calculator work.
 
 ## Live Demo 
 
