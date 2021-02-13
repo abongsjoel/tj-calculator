@@ -31,7 +31,7 @@ The calculator contains functions for all of the basic math operators we typical
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/abongsjoel/tj-weather-website/issues).
+Feel free to check the [issues page](https://github.com/abongsjoel/tj-calculator/issues).
 
 ## Acknowledgments
 
