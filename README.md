@@ -27,6 +27,12 @@ The calculator contains functions for all of the basic math operators we typical
 - Twitter: [@thierryjoel10](https://twitter.com/ThierryJoel10)
 - LinkedIn: [Chi Abongwa Joel](https://www.linkedin.com/in/chi-abongwa-joel-b4285a97/)
 
+## Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/abongsjoel/tj-weather-website/issues).
+
 ## Acknowledgments
 
 - [The Odin Project](https://www.theodinproject.com)
